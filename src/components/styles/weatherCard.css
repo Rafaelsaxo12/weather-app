@@ -1,74 +1,91 @@
 .weathercard {
-    background-color: #ccca;
-    border-radius: 20px;
-    width: 90%;
-    max-width: 550px;
-    min-height: 70vh;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+  background-color: #ccca;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 550px;
+  min-height: 70vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 .weathercard__title {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 .weathercard__body {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 0 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 0 50px;
 }
 .weathercard__data {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 .weathercard__list {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 .weathercard__item {
-    display: grid;
-    grid-template-columns: 4fr 2fr;
-    gap: 10px;
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  gap: 10px;
 }
 .weathercard__item span:first-child {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 .weathercard__item span:last-child {
-    font-weight: 900;
+  font-weight: 900;
 }
 .weathercard__temp {
-    margin: 15px 0;
+  margin: 15px 0;
 }
 .buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  gap: 10px;
+}
+
+.weathercard button,
+input {
+  width: max-content;
+  font: inherit;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 3px 3px 8px 3px rgba(0, 0, 0, 0.616);
+  transition: transform 0.3s;
+}
+.weathercard button:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
+.searchCountry input {
+  border-radius: 5px 0px 0px 5px;
+  cursor: auto;
+}
+.searchCountry button {
+  border-radius: 0px 5px 5px 0px;
+}
+@media (max-width: 407px) {
+  .searchCountry {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5px;
     gap: 10px;
-}
-.weathercard button, input {
-    width: max-content;
-    font: inherit;
-    padding: 10px 20px;
-    border: none;
+  }
+  .searchCountry input {
     border-radius: 5px;
-    box-shadow: 3px 3px 8px 3px rgba(0, 0, 0, 0.616);
-    transition: transform .3s;
-}
-.weathercard button:hover {
-    transform: scale(1.1);
-    transition: transform .3s;
-}
-.searchCountry input{
-    border-radius: 5px 0px 0px 5px;
-    cursor: auto;
-}
-.searchCountry button {
-    border-radius: 0px 5px 5px 0px;
+  }
+
+  .searchCountry button {
+    border-radius: 5px;
+  }
 }
